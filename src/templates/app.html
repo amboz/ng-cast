@@ -6,10 +6,10 @@
   </nav>
   <div class="row">
     <div class="col-md-7">
-      <video-player><h5><em>videoPlayer</em> component goes here</h5></video-player>
+      <video-player video="$ctrl.video"></video-player>
     </div>
     <div class="col-md-5">
-      <video-list videos='$ctrl.videos'></video-list>
+      <video-list videos='$ctrl.videos' on-click = "$ctrl.onClick"></video-list>
     </div>
     <div ng-repeat="video in $ctrl.videos">
       <p>HI</p>
