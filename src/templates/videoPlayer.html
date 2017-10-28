@@ -1,7 +1,7 @@
 <div class="video-player">
   <div class="embed-responsive embed-responsive-16by9">
     <iframe class="embed-responsive-item" ng-if = "$ctrl.video.id.videoId" src="{{'https://www.youtube.com/embed/' + $ctrl.video.id.videoId}}" allowFullScreen></iframe>
-    <!-- <iframe ng-if="$ctrl.video.id.videoId">Please wait</iframe> -->
+    <div ng-if = "$ctrl.video.id.videoId === undefined">Please wait</div>
   </div>
   <div class="video-player-details">
     <h3>{{$ctrl.video.snippet.title}}</h3>

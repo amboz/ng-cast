@@ -1,18 +1,16 @@
 <div ng-app="app" id="app container">
   <nav class="navbar">
     <div class="col-md-6 col-md-offset-3">
-      <search><h5><em>search</em> component goes here</h5></search>
+      <search result="$ctrl.search"><h5><em>search</em> component goes here</h5></search>
     </div>
   </nav>
   <div class="row">
     <div class="col-md-7">
-      <video-player video="$ctrl.video"></video-player>
+      <video-player ng-if="$ctrl.currentVideo" video="$ctrl.currentVideo"></video-player>
+      <!-- <video-player ng-if="$ctrl.currentVideo === undefined">Please wait</video-player> -->
     </div>
     <div class="col-md-5">
       <video-list videos='$ctrl.videos' on-click = "$ctrl.onClick"></video-list>
-    </div>
-    <div ng-repeat="video in $ctrl.videos">
-      <p>HI</p>
     </div>
   <div>
 </div>
