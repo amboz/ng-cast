@@ -1,7 +1,6 @@
 <div class="search-bar form-inline">
-  <input class="form-control" type="text" ng-model="$ctrl.searchInput"/>
+  <input class="form-control" type="text" ng-model="$ctrl.searchInput" ng-change="$ctrl.onChange()" ng-keyup="$event.keyCode == 13 && $ctrl.onEnter()"/>
   <button class="btn" ng-click="$ctrl.result($ctrl.searchInput)">
     <span class="glyphicon glyphicon-search" ></span>
   </button>
 </div>
- 

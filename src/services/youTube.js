@@ -1,7 +1,7 @@
 angular.module('video-player')
 .service('youTube', function($http) {
   
-  var search = function (query, callback) {
+  this.search = function (query, callback) {
     // console.log(query);
     var queryObj = {
       url: 'https://www.googleapis.com/youtube/v3/search',
@@ -25,7 +25,8 @@ angular.module('video-player')
     
     });
   };
-  return ({search: search});
+  console.log("here", this);
+  // return ({search: search});
 });
 
 
